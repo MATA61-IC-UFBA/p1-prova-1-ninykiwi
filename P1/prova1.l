@@ -51,7 +51,7 @@ ID         {LETRA}({LETRA}|{DIGITO}|_)*
 "("     { return LPAREN; }
 ")"     { return RPAREN; }
 "="     { return ASSIGN; }
-","     { return "," }
+","     { return ','; }
 
 "//".*   ;
 
