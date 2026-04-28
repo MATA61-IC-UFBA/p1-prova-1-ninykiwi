@@ -15,7 +15,7 @@ DIGITO      [0-9]
 INT         {DIGITO}+
 REAL        {DIGITO}+"."{DIGITO}+
 
-LETRA      [a-zA-Zà-úÀ-Ú][a-zA-Z0-9à-úÀ-Ú]*
+LETRA      [a-zA-Zà-úÀ-Ú]
 ID         {LETRA}({LETRA}|{DIGITO}|_)*
 
 %%
@@ -39,7 +39,7 @@ ID         {LETRA}({LETRA}|{DIGITO}|_)*
     return STRING;
 }
 
-{ ID } {
+{ID} {
     strcpy(lexema, yytext);
     return IDENT;
 }

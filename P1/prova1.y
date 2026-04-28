@@ -27,14 +27,18 @@ program
 ; 
 
 stmt_list
-: stmt
-| stmt_list stmt
+:
+| stmt_list stmts
+| stmt_list EOL
 ;
 
 stmt
 : IDENT ASSIGN expr
+| IDENT ASSIGN expr EOL
 | PRINT LPAREN exprlist RPAREN
+| PRINT LPAREN exprlist RPAREN EOL
 | expr
+| expr EOL
 ;
 
 exprlist
